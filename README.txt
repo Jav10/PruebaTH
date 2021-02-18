@@ -1,7 +1,7 @@
 # PruebaTH
 resultado e implementación de los ejercicios
 
-Desafío para hacerla de jamón:
+1- Desafío para hacerla de jamón:
 
 Para poder calificar se debe instanciar la clase regression_salchichas del módulo regresión, 
 pasando como parámetro el dataframe con las variables v1, v2 y v3, para obtener la calificación se debe llamar 
