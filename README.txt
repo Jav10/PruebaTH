@@ -3,20 +3,21 @@ resultado e implementación de los ejercicios
 
 1- Desafío Aguas Venenosas
 
-Para poder obtener las Aguas que podrían estar envenenadas, se necesita cargar el archivo distance.sav,
-quitar el indice 9999 y tomar la columna 9999, ordenar los valores de forma ascendente, tomar los 50 que 
-se ocupan y convertirlo a un archivo csv para poder enviarlo a la tropa.
+Para poder obtener las Aguas que podrían estar envenenadas, se necesita instanciar la clase Veneno del módulo veneno,
+pasando como parámetro el número de aguas que se requiera investigar y llamar al método csv, esto generará un archivo
+csv con los identificadores de las aguas.
 
-El orden en el que están ordenadas las aguas indica el nivel de atención que se les debe dar.
+El orden en el que están ordenadas (de arriba para abajo) las aguas indica el nivel de atención que se les debe dar.
 
-import pickle
+NOTA: Se ocupa el archivo .sav donde se encuentra guardado el modelo.
+distance.sav
+
+import veneno
 import pandas as pd
 
-with open('distance.sav', 'rb') as f:
-	distance = pickle.load(f)
- 
-distance.loc[distance.index!=9999,9999].sort_values().head(50).index
-s.to_csv("urgente_orden_de_cierre.csv", index=False)
+
+dist = veneno.Veneno(50)
+dist.csv()
 
 2- Desafío para hacerla de jamón:
 
